@@ -1,8 +1,8 @@
+const bot = BotManager.getCurrentBot();
 
-
-
-function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) {
-    if(msg=="퉤"){
-      replier.reply("퉤");
-    }
+function onMessage(msg) {
+  if (msg.content == "정보") {
+    msg.reply(msg.room + "\n" + msg.author.name + "\n" + msg.author.avatar.getBase64());
   }
+}
+bot.addListener(Event.MESSAGE, onMessage);
