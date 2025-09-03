@@ -66,7 +66,7 @@ def create_contents(messages: list[dict]):
     return contents
 
 
-def validate_response(response):
+def validate_response(response: types.GenerateContentResponse):
     answer = response.text
     numTokens = response.usage_metadata.total_token_count
 
