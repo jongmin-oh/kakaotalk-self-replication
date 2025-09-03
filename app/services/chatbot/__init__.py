@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class ChatbotRequest(BaseModel):
     room: str
     msg: str
@@ -8,5 +9,7 @@ class ChatbotRequest(BaseModel):
     replier: str
     imageDB: str
 
+
 class ChatbotResponse(BaseModel):
-    response: str
+    answer: str
+    num_tokens: int
