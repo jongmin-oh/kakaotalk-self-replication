@@ -15,12 +15,6 @@ app.add_middleware(
 )
 
 
-# 기본 헬스 체크 엔드포인트
-@app.get("/")
-async def root():
-    return {"message": "health check"}
-
-
 if __name__ == "__main__":
     uvicorn.run(
         "main:app",

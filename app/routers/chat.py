@@ -15,4 +15,4 @@ router = APIRouter(
 def chat(request: Request):
     params = ChatbotRequest(**request.body)
     response: ChatbotResponse = ChatbotChat(params).reply()
-    return response.to_dict()
+    return response.__dict__
